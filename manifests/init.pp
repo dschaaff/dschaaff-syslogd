@@ -1,6 +1,7 @@
 # == Class: syslogd
 #
-# this class should not be called directly, you should be using the defined type syslogd::remote
+# this class should not be called directly
+# you should be using the defined type syslogd::remote
 #
 # 
 # === Authors
@@ -17,8 +18,8 @@ class syslogd {
   }
 
   @concat {'/etc/syslog.conf':
-    owner   => 'root',
-    group   => 'wheel',
-    mode    => '0644',
+    owner => 'root',
+    group => 'wheel',
+    mode  => '0644',
     }
 }
