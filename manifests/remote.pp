@@ -24,7 +24,7 @@ define syslogd::remote (
     target  => '/etc/syslog.conf',
     content => "${facility}.${priority}							@${destination}:${port}\n",
     }
-  
+
   exec {'restart syslog':
     subscribe   => Concat['/etc/syslog.conf'],
     refreshonly => true,
